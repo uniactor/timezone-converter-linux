@@ -1,0 +1,406 @@
+window.desk {
+  background-color: transparent;
+  font-family: "Ubuntu Sans", "Noto Sans CJK SC", sans-serif;
+}
+
+.canvas {
+  padding: 30px;
+  background-color: transparent;
+}
+
+.glass {
+  min-width: 300px;
+  padding: 16px 16px 14px;
+  border-radius: 26px;
+  color: #1d1d1f;
+  background-color: alpha(white, 0.8);
+  background-image: linear-gradient(to bottom, alpha(white, 0.55), alpha(white, 0.16));
+  border: 1px solid alpha(white, 0.92);
+  box-shadow:
+    inset 0 1px 0 alpha(white, 0.95),
+    0 16px 36px alpha(black, 0.16),
+    0 2px 6px alpha(black, 0.05);
+}
+
+.macos-dark .glass {
+  color: #f5f5f7;
+  background-color: alpha(#1c1c1e, 0.8);
+  background-image: linear-gradient(to bottom, alpha(white, 0.14), alpha(white, 0.03));
+  border: 1px solid alpha(white, 0.14);
+  box-shadow:
+    inset 0 1px 0 alpha(white, 0.2),
+    0 18px 40px alpha(black, 0.46);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.live-dot {
+  border-radius: 999px;
+  min-width: 8px;
+  min-height: 8px;
+  background-color: #34c759;
+}
+
+.live-dot.paused {
+  background-color: #8e8e93;
+}
+
+.city-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: alpha(#3c3c43, 0.6);
+}
+
+.macos-dark .city-name {
+  color: alpha(#ebebf5, 0.6);
+}
+
+.meta {
+  font-size: 12px;
+  font-weight: 500;
+  color: alpha(#3c3c43, 0.48);
+}
+
+.macos-dark .meta {
+  color: alpha(#ebebf5, 0.5);
+}
+
+.offset,
+.offset-base {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.offset {
+  font-weight: 700;
+  color: #007aff;
+}
+
+.macos-dark .offset {
+  color: #0a84ff;
+}
+
+.offset-base {
+  color: alpha(#3c3c43, 0.42);
+  font-weight: 600;
+}
+
+.macos-dark .offset-base {
+  color: alpha(#ebebf5, 0.46);
+}
+
+button.time {
+  padding: 0 2px;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 10px;
+  color: inherit;
+  font-size: 40px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+button.time > label {
+  padding: 0;
+}
+
+button.time:hover {
+  background-color: alpha(#007aff, 0.08);
+}
+
+button.time:active {
+  background-color: alpha(#007aff, 0.14);
+}
+
+button.ghost {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 2px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  color: alpha(#3c3c43, 0.72);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+button.add-glyph {
+  font-size: 22px;
+  font-weight: 400;
+  min-width: 30px;
+}
+
+button.menu-glyph {
+  font-size: 12px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.macos-dark button.ghost {
+  color: alpha(#ebebf5, 0.75);
+}
+
+button.ghost:hover {
+  background-color: alpha(#007aff, 0.12);
+  color: #007aff;
+}
+
+button.now,
+button.done,
+button.editor-action {
+  min-height: 26px;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 999px;
+  background-color: alpha(#007aff, 0.12);
+  box-shadow: none;
+  color: #007aff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+button.now:hover,
+button.done:hover,
+button.editor-action:hover {
+  background-color: alpha(#007aff, 0.2);
+}
+
+button.remove {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0;
+  margin-right: 8px;
+  border: none;
+  border-radius: 999px;
+  background-color: #ff3b30;
+  box-shadow: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button.remove:hover {
+  background-color: #ff453a;
+}
+
+button.linkish {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  margin-top: 2px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  color: #007aff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hairline {
+  min-height: 1px;
+  background-color: alpha(black, 0.1);
+}
+
+.macos-dark .hairline {
+  background-color: alpha(white, 0.12);
+}
+
+.delta {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background-color: alpha(#007aff, 0.12);
+  color: #007aff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.macos-dark .delta {
+  background-color: alpha(#0a84ff, 0.2);
+  color: #64b5ff;
+}
+
+.toast {
+  margin-top: 6px;
+  color: #ff3b30;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+popover.menu-pop > contents {
+  padding: 8px;
+  border-radius: 16px;
+  background-color: alpha(#ffffff, 0.97);
+  border: 1px solid alpha(black, 0.06);
+  box-shadow: 0 16px 40px alpha(black, 0.16);
+  color: #1d1d1f;
+}
+
+.macos-dark popover.menu-pop > contents {
+  background-color: alpha(#2c2c2e, 0.97);
+  border: 1px solid alpha(white, 0.08);
+  color: #f5f5f7;
+}
+
+popover.menu-pop arrow {
+  background-color: alpha(#ffffff, 0.97);
+  border-color: alpha(black, 0.06);
+}
+
+.macos-dark popover.menu-pop arrow {
+  background-color: alpha(#2c2c2e, 0.97);
+  border-color: alpha(white, 0.08);
+}
+
+button.menu-item {
+  padding: 8px 10px;
+  min-height: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+button.menu-item label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+button.menu-item:hover {
+  background-color: alpha(#007aff, 0.12);
+}
+
+button.danger,
+button.danger label {
+  color: #ff3b30;
+}
+
+.check {
+  color: #007aff;
+  font-weight: 700;
+}
+
+.menu-sep {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: alpha(black, 0.08);
+  min-height: 1px;
+}
+
+.macos-dark .menu-sep {
+  background-color: alpha(white, 0.1);
+}
+
+entry.search {
+  min-height: 34px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 11px;
+  background-color: alpha(black, 0.05);
+  box-shadow: none;
+  caret-color: #007aff;
+  font-size: 14px;
+}
+
+.macos-dark entry.search {
+  background-color: alpha(white, 0.08);
+  color: #f5f5f7;
+}
+
+entry.search:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 3px alpha(#007aff, 0.28);
+}
+
+list.places {
+  background: transparent;
+}
+
+list.places row {
+  padding: 6px 8px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+list.places row:hover {
+  background-color: alpha(#007aff, 0.12);
+}
+
+.place-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.editor-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: alpha(#3c3c43, 0.55);
+}
+
+.macos-dark .editor-title {
+  color: alpha(#ebebf5, 0.6);
+}
+
+.step-value {
+  font-size: 28px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.date-value {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+button.step,
+button.chevron {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background-color: alpha(black, 0.05);
+  box-shadow: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.macos-dark button.step,
+.macos-dark button.chevron {
+  background-color: alpha(white, 0.08);
+  color: #f5f5f7;
+}
+
+button.step:hover,
+button.chevron:hover {
+  background-color: alpha(#007aff, 0.16);
+  color: #007aff;
+}
+
+.others {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+scrolledwindow.city-scroll,
+scrolledwindow.place-scroll {
+  background: transparent;
+  border: none;
+}
+
+scrolledwindow.city-scroll slider,
+scrolledwindow.place-scroll slider {
+  border-radius: 999px;
+  background-color: alpha(black, 0.28);
+  min-width: 4px;
+}
